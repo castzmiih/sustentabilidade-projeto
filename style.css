@@ -1,0 +1,95 @@
+:root {
+    --primary: #2d5a27;
+    --secondary: #8bc34a;
+    --text: #333;
+    --light: #f4f4f4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navegação */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: var(--primary);
+    margin-left: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#navbar ul li a:hover {
+    color: var(--secondary);
+}
+
+/* Slides como Seções Full Height */
+.slide {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10%;
+    text-align: center;
+    transition: opacity 1s ease;
+}
+
+.slide:nth-child(odd) {
+    background-color: var(--light);
+}
+
+.slide:nth-child(even) {
+    background-color: #fff;
+}
+
+.content {
+    max-width: 800px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.content.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h1 { font-size: 3.5rem; color: var(--primary); margin-bottom: 1rem; }
+h2 { font-size: 2.2rem; color: var(--secondary); margin-bottom: 1.5rem; }
+p { font-size: 1.2rem; margin-bottom: 1rem; }
+
+blockquote {
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #555;
+    border-left: 5px solid var(--secondary);
+    padding-left: 20px;
+    margin: 20px 0;
+}
+
+.credits { margin-top: 50px; font-weight: bold; font-size: 0.9rem; }
